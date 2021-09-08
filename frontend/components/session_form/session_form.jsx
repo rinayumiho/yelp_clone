@@ -17,6 +17,7 @@ class SessionForm extends React.Component {
     }
 
     handleSubmit(e) {
+        debugger
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
@@ -38,7 +39,7 @@ class SessionForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to yelp_clone!
+                    Welcome to Pley!
                     <br/>
                     Please {this.props.formType} or {this.props.navLink}
                     {this.renderErrors()}

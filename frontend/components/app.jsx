@@ -5,7 +5,7 @@ import { Route } from 'react-router-dom'
 
 const App = () => (
     <div>
-        <h1>yelp_clone</h1>
+        <h1>pley</h1>
         <Route path="/signup" component={SignupFormContainer} />
         <Route path="/login" component={LoginFormContainer} />
         

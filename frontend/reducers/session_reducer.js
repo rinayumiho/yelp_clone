@@ -1,3 +1,4 @@
+// import { debug } from 'webpack';
 import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session_actions';
   
 const _nullUser = Object.freeze({
@@ -6,9 +7,11 @@ const _nullUser = Object.freeze({
   
 const sessionReducer = (oldState = _nullUser, action) => {
     Object.freeze(oldState);
+    debugger
     switch(action.type) {
         case RECEIVE_CURRENT_USER:
-            return { id: action.currentUser.id };
+            debugger
+            return { id: action.user };
         case LOGOUT_CURRENT_USER:
             return _nullUser;
         default:
