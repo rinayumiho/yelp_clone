@@ -5,7 +5,11 @@ class Api::BusinessesController < ApplicationController
     end
 
     def index 
-        # write code here!!!
+        if params[:query]
+            @businesses = Business.all.select{ |ele| ele.name.include?(params[:query]) }
+        else
+            @businesses = Business.all
+        end
         render :index
     end
 
