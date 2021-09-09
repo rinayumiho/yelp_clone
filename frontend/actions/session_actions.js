@@ -22,7 +22,6 @@ export const signup = user => dispatch => (
     APISessionUtil.signup(user).then(user => (
         dispatch(receiveCurrentUser(user))
     ), err => {
-        debugger
         return dispatch(receiveErrors(err.responseJSON))
     })
 );
