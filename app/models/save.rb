@@ -1,5 +1,5 @@
 class Save < ApplicationRecord
-    validates :user_id, business_id, presence: true
+    validates :user_id, :business_id, presence: true
 
     belongs_to :user,
         primary_key: :id,
