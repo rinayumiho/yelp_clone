@@ -1,6 +1,6 @@
 class Review < ApplicationRecord
     validates :body, :user_id, :business_id, presence: true
-    validates :stars, presence: true, inclusion { in [1, 2, 3, 4, 5] }
+    validates :stars, presence: true, inclusion { in: [1, 2, 3, 4, 5] }
 
     belongs_to :user,
         primary_key: :id,
