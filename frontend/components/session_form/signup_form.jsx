@@ -10,6 +10,10 @@ class SignupForm extends React.Component {
             email: "",
             password: ""
         };
+        this.demo = {
+            email: "longchen@email.com",
+            password: "longchen"
+        };
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
@@ -87,9 +91,10 @@ class SignupForm extends React.Component {
                                     className="session-form-input" />
                                     <br/>
                                 <input type="submit" value="Sign Up" className="submit"/>
-                                <button className="demo-user-submit"onClick={() => this.props.processForm(this.demo).then(() => this.props.history.push(`/`))}>Demo User</button>
-                                <p className="session-form-bottom">Already on yulp? <Link to='/login' className="session-text">Log in</Link></p>
+                                
                             </form>
+                            <button className="demo-user-submit"onClick={() => this.props.processDemo(this.demo).then(() => this.props.history.push(`/`))}>Demo User</button>
+                            <p className="session-form-bottom">Already on yulp? <Link to='/login' className="session-text">Log in</Link></p>
                             
                         </div>
                         <img className="graphics" src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png" />
