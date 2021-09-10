@@ -16,10 +16,11 @@
 }
 
 .splash-logo{
-    width: 180%;
+    width: 120%;
     height: auto;
     position: relative;
     top: 50px;
+    left: 50px;
 }
 
 .search-bar-container{

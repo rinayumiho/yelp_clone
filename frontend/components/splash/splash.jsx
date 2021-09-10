@@ -17,7 +17,7 @@ class Splash extends React.Component {
                         <SearchBar formType={this.props.formType} searchBusinesses={this.props.searchBusinesses} />
                     </div>
                     <div className="splash-logo-container">
-                        <Link to="/"><img className="splash-logo" src="https://i.ibb.co/ydJ6Mvg/yelp-clone-logo-removebg-preview.png" /></Link>
+                        <Link to="/"><img className="splash-logo" src="https://i.ibb.co/G37QPsf/yelp-clone-logo-removebg-preview.png" /></Link>
                     </div>
                 </div>
                 
