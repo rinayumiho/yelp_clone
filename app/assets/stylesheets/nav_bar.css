@@ -1,0 +1,70 @@
+.nav-main{
+    /* background-color: green; */
+    position: relative;
+    z-index: 1;
+    top: 16px;
+    display: flex;
+    justify-content: space-between;
+    left: 150px;
+    width: 955px;
+}
+
+.nav-main-sub{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.session-button0splash{
+    font: bold 14px Arial, Helvetica, "Helvetica Neue";
+    color: white;
+    padding: 10px 10px;
+    background: transparent;
+    border-color: transparent;
+    outline: none;
+    margin-right: 10px;
+    height: 35px;
+}
+
+.session-button1splash{
+    font: bold 14px Arial, Helvetica, "Helvetica Neue";
+    color: white;
+    padding: 10px 10px;
+    background: transparent;
+    border-color: transparent;
+    outline: none;
+    margin-right: 10px;
+    height: 35px;
+}
+
+.session-button1splash:active{
+    color: rgb(180, 180, 180);
+    outline: none;
+}
+
+.session-button1splash:hover{
+    border-bottom: 2px solid white;
+    cursor: pointer;
+    outline: none;
+}
+
+.session-button2splash{
+    font: bold 14px Arial, Helvetica, "Helvetica Neue";
+    color: white;
+    padding: 7px 24px 8px;
+    border: white solid 2px;
+    border-radius: 4px;
+    background: transparent;
+}
+
+.session-button2splash:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    /* background-color: white; */
+    color: black;
+    background-color: white;
+}
+
+.session-button2splash:active{
+    outline: none;
+}

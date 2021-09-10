@@ -2,14 +2,19 @@ import React from "react";
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SplashContainer from './splash/splash_container';
-import { Route } from 'react-router-dom'
+import { Route, Link, Switch } from 'react-router-dom'
 
 const App = () => (
     <div>
+        <Switch>
+            <Route exact path="/signup" component={SignupFormContainer} />
+            <Route exact path="/login" component={LoginFormContainer} />
+            <Route exact path="/" component={SplashContainer}/>
+        </Switch>     
         {/* <h1>pley</h1> */}
-        <Route path="/signup" component={SignupFormContainer} />
-        <Route path="/login" component={LoginFormContainer} />
-        <Route path="/" component={SplashContainer}/>
+        {/* <Route path="/signup" component={SignupFormContainer} />
+        <Route path="/login" component={LoginFormContainer} /> */}
+        {/* <Route path="/" component={SplashContainer}/> */}
     </div>
 );
 

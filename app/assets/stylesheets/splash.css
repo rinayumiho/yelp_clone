@@ -11,22 +11,23 @@
     left: 490px;
     position: relative;
     width: 180px;
-    /* top: 120px; */
+    top: -80px;
+    /* border: 5px solid black; */
 }
 
 .splash-logo{
-    width: 100%;
+    width: 180%;
     height: auto;
     position: relative;
-    right: -15px;
     top: 50px;
 }
 
-.search-box-container-splash{
+.search-bar-container{
     z-index: 5;
     position: relative;
     top: 230px;
     left: 140px;
+    /* border: 5px solid red; */
 }
 
 .splash-top-container{

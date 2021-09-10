@@ -1,0 +1,187 @@
+.session-form-top {
+    /* display: flex; */
+    justify-content: center;
+    background-color: #d32323;
+    padding: 10px 0px 10px 0px;
+    display: grid;
+    height: 45px;
+}
+
+.yelp-clone-logo {
+    width: 180px;
+    height: 40px;
+    position: relative;
+}
+
+.session-form-main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.session-errors-box-login{
+    display: flex;
+    height: 60px;
+    background-color: #FCD6D3;
+    width: 960px;
+    border-radius: 4px;
+    margin-top: 50px;
+    min-width: 960px;
+    position: relative;
+    left: 220px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, "Helvetica Neue";
+    color: #333333;
+}
+.session-errors-box-login :first-child{
+    margin: 12px;
+}
+
+.session-errors-box-signup{
+    display: flex;
+    height: 100%;
+    background-color: #FCD6D3;
+    width: 960px;
+    border-radius: 4px;
+    min-width: 960px;
+    position: relative;
+    left: 220px;
+    top: 60px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, "Helvetica Neue";
+    color: #333333;
+}
+
+.session-errors-box-signup li{
+    margin: 12px;
+}
+
+.session-form-box form{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+}
+
+.session-form-header {
+    font: bold 22px Arial, Helvetica, "Helvetica Neue";
+    color: #d32323;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 50px;
+}
+
+.session-form-header-2 {
+    font: bold 14px Arial, Helvetica, "Helvetica Neue";
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.session-form-header-3 {
+    font: 12px Arial, Helvetica, "Helvetica Neue";
+    color: grey;
+    text-align: center;
+    margin: 14px 0 0 0;
+}
+
+.graphics {
+    height: 350px;
+    margin: 50px;
+}
+
+.session-form-input {
+    background-color: white;
+    margin: 0px 5px 9px;
+    padding: 5px 9px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 30px;
+    width: 100%;
+}
+
+.submit{
+    background-color: #d32323;
+    font: bold 16px Arial, Helvetica, "Helvetica Neue";
+    color: white;
+    padding: 13px 13px;
+    margin-top: 6px;
+    border: 0px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 5px;
+    width: 100%;
+    outline: none;
+}
+
+.submit:hover {
+    cursor: pointer;
+    background-color: #d54b4b;
+    transition: 0.5s;
+}
+.session-form-main{
+    display: flex;
+    margin: 100px 0 100px 0;
+}
+
+.session-form-bottom {
+    font: 12px Arial, Helvetica, "Helvetica Neue";
+    color: grey;
+    text-align: right;
+    margin: 14px 0 0 0;
+}
+
+.session-form-bottom:visited{
+    color: rgb(0, 106, 198);
+    text-decoration: none;
+}
+
+.session-text{
+    text-decoration: none;
+    color: rgb(0, 106, 198);
+}
+
+
+.first-last-name{
+    display: flex;
+}
+
+.first-last-name input{
+    margin: 5px 0px 7px 5px; 
+    border: 1px solid grey;
+    border-radius: 3px;
+    height: 30px;
+    width: 135.5px;
+}
+
+.first-last-name :first-child{
+    margin-right: 1px;
+}
+
+.session-form-fillout{
+    width: 300px;
+}
+
+.demo-user-submit{
+    background-color: #d32323;
+    font: bold 16px Arial, Helvetica, "Helvetica Neue";
+    color: white;
+    padding: 13px 13px;
+    margin-top: 6px;
+    border: 0px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 5px;
+    width: 100%;
+}
+
+.demo-user-submit:hover{
+    cursor: pointer;
+    background-color: #d54b4b;
+    transition: 0.5s;
+}
+
+.sign-up-name{
+    padding: 0px 0px 0px 9px;
+}

@@ -1,0 +1,62 @@
+.search-bar-container{
+    width: 970px;
+}
+
+.search-tag1{
+    font: bold 18px Arial, Helvetica, "Helvetica Neue";
+    color: #636262;
+    font-weight: bolder;
+    background-color: white;
+    padding: 13px 12px;
+    border-radius: 4px 0px 0px 4px;
+    border-right: 1px solid rgb(142, 140, 140);
+}
+
+.search-text{
+    padding: 12px 13px;
+    font: 18px Arial, Helvetica, "Helvetica Neue";
+    border: none;
+    outline: none;
+    width: 360px;
+}
+
+.search-tag2{
+    font: bold 18px Arial, Helvetica, "Helvetica Neue";
+    color: rgb(99, 98, 98);
+    font-weight: bolder;
+    background-color: white;
+    padding: 13px 13px;
+    border-left: 2px, rgb(99, 98, 98)
+}
+
+.search-tag2 .search-text::placeholder{
+    color: black;
+}
+
+.search-icon-buttonsplash{
+    position: relative;
+    top: 11px;
+    border: none;
+    background-color: #d32323;
+    border-radius: 0px 4px 4px 0px;
+    height: 46px;
+    width: 65px;
+    outline: none;
+}
+
+.search-icon-buttonsplash:hover{
+    cursor: pointer;
+    background-color: #b61f1f;
+    transition: 0.7s;
+}
+
+.search-categories {
+    width: 950px;
+    background-color: green;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font: bold 14px Arial, Helvetica, "Helvetica Neue";
+    color: white;
+    background: transparent;
+}
