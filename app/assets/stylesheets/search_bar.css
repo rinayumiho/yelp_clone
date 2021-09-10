@@ -51,6 +51,7 @@
 }
 
 .search-categories {
+    margin-top: 15px;
     width: 950px;
     background-color: green;
     display: flex;

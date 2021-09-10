@@ -100,7 +100,7 @@
     background-color: white;
     width: 218px;
     right: 20px;
-    top: 41px;
+    top: 46px;
     border-radius: 3px;
     box-shadow: 0 3px 3px darkgrey;
 }
@@ -119,7 +119,7 @@
 .dropdown-profile{
     display: flex;
     border-bottom: 1px solid lightgray;
-    margin: 0 12px;
+    margin: 0px 12px;
 }
 
 .dropdown-profile-name{
