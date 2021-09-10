@@ -6,7 +6,7 @@ import { searchBusinesses } from '../../actions/business_actions';
 
 const mapStateToProps = (state, ownProps) => ({
     formType: "splash",
-    currentUser: state.entities.users[state.session.id]
+    user: state.entities.users[state.session.id]
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -38,7 +38,7 @@
     min-width: 1024px;
     height: 600px;
     background-color: #cccccc;
-    background-image: url('https://hoodwork-production.s3.amazonaws.com/uploads/story/image/642562/Perilla_Korean_American_Fare_Photo_1_Enhanced.jpg');
+    background-image: url('https://i.ibb.co/tq6kmsN/yelp-background.jpg');
     min-height:100%;
     background-size:cover;
     box-shadow:inset 0 0 0 2000px rgba(94, 94, 94, 0.5);
@@ -53,4 +53,79 @@
     min-width: 1024px;
     min-height: 600px;
 
+}
+
+.nav-logout{
+    font: 14px Arial, Helvetica, "Helvetica Neue";
+    color: #0073BB;
+    /* padding: 7px 24px 8px; */
+    border: white solid 2px;
+    border-radius: 4px;
+    background: transparent;
+    outline: none;
+    margin: 4px;
+}
+
+.nav-logout:hover{
+    background-color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.profile{
+    width: 40px;
+    border-radius: 4px 0 0 4px;
+}
+
+.profile:hover{
+    background-color: black;
+    opacity: 0.7;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.profile-inner{
+    width: 60px;
+    margin: 12px 12px 12px 0;
+    border-radius: 3px;
+}
+
+.nav-dropdown-content{
+    display: none;
+    position: absolute;
+    min-width: 60px;
+    z-index: 1;
+    background-color: white;
+    width: 218px;
+    right: 20px;
+    top: 41px;
+    border-radius: 3px;
+    box-shadow: 0 3px 3px darkgrey;
+}
+
+.nav-signed-on{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    min-width: 100px;
+}
+
+.show {
+    display: block;
+}
+
+.dropdown-profile{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    margin: 0 12px;
+}
+
+.dropdown-profile-name{
+    color: #0073BB;
+    font-size: 14px;
+    font-family: Arial, Helvetica, "Helvetica Neue";
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 8px;
 }

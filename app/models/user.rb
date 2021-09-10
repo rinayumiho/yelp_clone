@@ -1,12 +1,12 @@
 class User < ApplicationRecord
     validates :first_name, :last_name, :email, :password_digest, :session_token, presence: true
     validates :email, uniqueness: true
-    validates :password, length: {minimum: 8}, allow_nil: true
+    validates :password, length: { minimum: 8 }, allow_nil: true
 
     has_many :reviews,
         primary_key: :id,
         foreign_key: :user_id,
-        class_name: :User,
+        class_name: :Review,
         dependent: :destroy
 
     has_many :usefuls,

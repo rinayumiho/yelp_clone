@@ -10,7 +10,7 @@ class LoginForm extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demo = {
-            email: "long@email.com",
+            email: "longchen@email.com",
             password: "longchen"
         };
     }
@@ -48,7 +48,7 @@ class LoginForm extends React.Component {
                         <Link to="/"><img className="yelp-clone-logo" src="https://i.ibb.co/ydJ6Mvg/yelp-clone-logo-removebg-preview.png"/></Link>
                     </div>
                     <div className="session-errors-container">
-                        <div className={this.props.errors.length == 0 ? "" : "session-errors-box-login"}>
+                        <div className={this.props.errors.length === 0 ? "" : "session-errors-box-login"}>
                             {this.renderErrors()}
                         </div>
                     </div>
