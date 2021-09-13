@@ -15,15 +15,18 @@ class Review < ApplicationRecord
     has_many :usefuls,
         primary_key: :id,
         foreign_key: :review_id,
-        class_name: :Useful
+        class_name: :Useful,
+        dependent: :destroy
 
     has_many :funnies,
         primary_key: :id,
         foreign_key: :review_id,
-        class_name: :Funny
+        class_name: :Funny,
+        dependent: :destroy
 
     has_many :cools,
         primary_key: :id,
         foreign_key: :review_id,
-        class_name: :Cool
+        class_name: :Cool,
+        dependent: :destroy
 end

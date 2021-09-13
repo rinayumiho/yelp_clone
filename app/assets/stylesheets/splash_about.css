@@ -1,0 +1,31 @@
+.footer-title{
+    font: bold 21px Arial, Helvetica, "Helvetica Neue";
+    text-align: center;
+    margin: 30px 0 0 0;
+}
+
+.about-links{
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+.about-link{
+    margin: 10px;
+}
+
+.about-pic{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.bottom-image{
+    width: 100%;
+    min-width: 900px;
+}
+
+.footer-about{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,4 +1,4 @@
-export const fetchBusiness = (businessId) => (
+export const fetchBusiness = businessId => (
     $.ajax({
         method: "GET",
         url: `/api/businesses/${businessId}`
@@ -12,7 +12,7 @@ export const fetchBusinesses = () => (
     })
 );
 
-export const searchBusinesses = (search) => (
+export const searchBusinesses = search => (
     $.ajax({
         method: "GET",
         url: `/api/businesses?query=${search}`

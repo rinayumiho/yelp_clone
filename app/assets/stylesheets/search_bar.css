@@ -61,3 +61,8 @@
     color: white;
     background: transparent;
 }
+
+.search-bar-container-business{
+    position: relative;
+    top: 25px;
+}
