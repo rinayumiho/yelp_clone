@@ -10,12 +10,12 @@ class SearchBar extends React.Component {
     }
     
     update(type){
-        debugger
+        // debugger
         return e => this.setState({ [type]: e.currentTarget.value });
     }
 
     handleSubmit(e){
-        debugger
+        // debugger
         e.preventDefault();
         // debugger
         this.props.searchBusinesses(this.state.query).then(() => this.props.history.push(`/businesses?query=${this.state.query}`));
