@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 import BusinessIndex from './business_index'
-import {withRouter} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import { logout } from '../../actions/session_actions';
 import { searchBusinesses } from '../../actions/business_actions';
 
 const mapStateToProps = (state, ownProps) => ({
     businesses: Object.values(state.entities.businesses),
-    formType: "other_pages",
+    formType: "other",
     user: state.entities.users[state.session.id]
 });
 

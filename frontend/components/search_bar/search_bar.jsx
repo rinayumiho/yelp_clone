@@ -10,26 +10,29 @@ class SearchBar extends React.Component {
     }
     
     update(type){
-        return e => this.setState({[type]: e.currentTarget.value});
+        debugger
+        return e => this.setState({ [type]: e.currentTarget.value });
     }
 
     handleSubmit(e){
-        e.preventDefault()
-        this.props.searchBusinesses(this.state.query).then(() => this.props.history.push(`/businesses?query=${this.state.query}`))
+        debugger
+        e.preventDefault();
+        // debugger
+        this.props.searchBusinesses(this.state.query).then(() => this.props.history.push(`/businesses?query=${this.state.query}`));
     }
 
     render(){
         return(
             <div className={`search-bar-container-${this.props.formType}`}>
                 <form onSubmit={this.handleSubmit}>
-                    <div className="search-bar">
-                        <label className="search-tag1">Find
-                            <input className="search-text" type="text" placeholder="nail salons, plumbers, takeout..." onChange={this.update('query')}/>
+                    <div className={`search-bar-${this.props.formType}`}>
+                        <label className={`search-tag1-${this.props.formType}`}>Find
+                            <input className={`search-text-${this.props.formType}`} type="text" placeholder="nail salons, plumbers, takeout..." onChange={this.update('query')}/>
                         </label>
-                        <label className="search-tag2">Near
-                            <input className="search-text" type="text" placeholder="Philadelphia, PA" />
+                        <label className={`search-tag2-${this.props.formType}`}>Near
+                            <input className={`search-text-${this.props.formType}`} type="text" placeholder="Philadelphia, PA" />
                         </label>
-                        <button className="search-icon-buttonsplash">
+                        <button type="submit" className="search-icon-buttonsplash">
                             <img src="http://d5yem10y0aabn.cloudfront.net/search_icon.png" alt="search icon"/>
                         </button>
                     </div>
@@ -46,4 +49,4 @@ class SearchBar extends React.Component {
     }
 }
 
-export default SearchBar;
+export default withRouter(SearchBar);

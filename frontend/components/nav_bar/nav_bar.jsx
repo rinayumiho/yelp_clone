@@ -13,27 +13,27 @@ class NavBar extends React.Component {
     render(){
         return !this.props.user ? 
             (
-                <nav className="nav-main">
-                    <div className="nav-main-sub">
-                        <p className="session-button0splash">Write a Review</p>
-                        <p className="session-button0splash">Events</p>
-                        <p className="session-button0splash">Talk</p>
+                <nav className={`nav-main-${this.props.formType}`}>
+                    <div className={`nav-main-sub-${this.props.formType}`}>
+                        <p className={`session-button0-${this.props.formType}`}>Write a Review</p>
+                        <p className={`session-button0-${this.props.formType}`}>{this.props.formType === "splash" ? "Events" : ""}</p>
+                        <p className={`session-button0-${this.props.formType}`}>{this.props.formType === "splash" ? "Talk" : ""}</p>
                     </div>
-                    <div className="nav-main-sub">
-                        <Link to="/login"><button className="session-button1splash">Log In</button></Link>
-                        <Link to="/signup"><button className="session-button2splash">Sign Up</button></Link>
+                    <div className={`nav-main-sub-${this.props.formType}`}>
+                        <Link to="/login"><button className={`session-button1-${this.props.formType}`}>Log In</button></Link>
+                        <Link to="/signup"><button className={`session-button2-${this.props.formType}`}>Sign Up</button></Link>
                     </div>
                 </nav>
             )
             :
             (
-                <div className="nav-main">
-                    <div className="nav-main-sub">
-                        <p className="session-button0splash">Write a Review</p>
-                        <p className="session-button0splash">Events</p>
-                        <p className="session-button0splash">Talk</p>
+                <div className={`nav-main-${this.props.formType}`}>
+                    <div className={`nav-main-sub-${this.props.formType}`}>
+                        <p className={`session-button0-${this.props.formType}`}>Write a Review</p>
+                        <p className={`session-button0-${this.props.formType}`}>Events</p>
+                        <p className={`session-button0-${this.props.formType}`}>Talk</p>
                     </div>
-                    <div className="nav-main-sub">
+                    <div className={`nav-main-sub-${this.props.formType}`}>
                         <div className="drpbtwn">
                             <button onClick={() => this.handleClick()} className="nav-signed-on">
                                 <img className="profile" src="https://bestnycacupuncturist.com/wp-content/uploads/2016/11/anonymous-avatar-sm.jpg" />

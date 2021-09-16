@@ -4,6 +4,8 @@ import NavBar from '../nav_bar/nav_bar';
 import SearchBar from '../search_bar/search_bar';
 import SplashBusinesses from '../splash_businesses/splash_businesses';
 import SplashAbout from '../splash_about/splash_about';
+import SearchBarContainer from '../search_bar/search_bar_container';
+
 
 class Splash extends React.Component {
     constructor(props){
@@ -17,10 +19,12 @@ class Splash extends React.Component {
                     <div className="splash-main-top">
                         <div className="nav-bar-container">
                             <NavBar formType={this.props.formType} user={this.props.user} logout={this.props.logout} />
-                            <SearchBar formType={this.props.formType} searchBusinesses={this.props.searchBusinesses} />
+                            
                         </div>
                         <div className="splash-logo-container">
                             <Link to="/"><img className="splash-logo" src="https://i.ibb.co/G37QPsf/yelp-clone-logo-removebg-preview.png" /></Link>
+                            {/* <SearchBar formType={this.props.formType} searchBusinesses={this.props.searchBusinesses} /> */}
+                            <SearchBarContainer formType={this.props.formType} searchBusinesses={this.props.searchBusinesses}/>
                         </div>
                     </div>
 

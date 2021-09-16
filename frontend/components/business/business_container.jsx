@@ -7,7 +7,7 @@ import { logout } from '../../actions/session_actions';
 const mapStateToProps = (state, ownProps) => ({
     business: state.entities.businesses[ownProps.match.params.businessId],
     user: state.entities.users[state.session.id],
-    formType: "business"
+    formType: "other"
 });
 
 const mapDispatchToProps = dispatch => ({

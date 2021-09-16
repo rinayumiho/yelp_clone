@@ -1,5 +1,6 @@
 class Business < ApplicationRecord
-    validates :name, :website, :phone, :address, presence: true
+    validates :name, :website, :phone, :address, :longitude, :latitude, :city, :state, presence: true
+    has_many_attached :photos
 
     has_many :reviews,
         primary_key: :id,

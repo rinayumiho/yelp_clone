@@ -43,7 +43,11 @@ business1 = Business.create!(
     name: "Texas Roadhouse",
     website: "https://www.texasroadhouse.com/locations/pennsylvania/bensalem",
     phone: "(215)639-7427",
-    address: "1545 Street Rd Bensalem, PA 19020"
+    address: "1545 Street Rd Bensalem, PA 19020",
+    longitude: -74.94003325978738,
+    latitude: 40.09179579481741,
+    city: "Bensalman",
+    state: "PA"
 )
 
 review1_1 = Review.create!(

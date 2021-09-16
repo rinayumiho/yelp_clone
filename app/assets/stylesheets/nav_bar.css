@@ -1,4 +1,4 @@
-.nav-main{
+.nav-main-splash{
     /* background-color: green; */
     position: relative;
     z-index: 1;
@@ -9,13 +9,31 @@
     width: 955px;
 }
 
-.nav-main-sub{
+.nav-main-other{
+    /* background-color: green; */
+    position: relative;
+    z-index: 1;
+    top: 16px;
+    display: flex;
+    justify-content: flex-end;
+    /* left: 150px; */
+    width: 450px;
+}
+
+.nav-main-sub-splash{
     position: relative;
     display: flex;
     justify-content: center;
 }
 
-.session-button0splash{
+.nav-main-sub-other{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: -100px;
+}
+
+.session-button0-splash{
     font: bold 14px Arial, Helvetica, "Helvetica Neue";
     color: white;
     padding: 10px 10px;
@@ -26,7 +44,18 @@
     height: 35px;
 }
 
-.session-button1splash{
+.session-button0-other{
+    font: bold 14px Arial, Helvetica, "Helvetica Neue";
+    /* color: white; */
+    padding: 10px 10px;
+    background: transparent;
+    border-color: transparent;
+    outline: none;
+    margin-right: 10px;
+    height: 35px;
+}
+
+.session-button1-splash{
     font: bold 14px Arial, Helvetica, "Helvetica Neue";
     color: white;
     padding: 10px 10px;
@@ -37,18 +66,39 @@
     height: 35px;
 }
 
-.session-button1splash:active{
+.session-button1-splash:active{
     color: rgb(180, 180, 180);
     outline: none;
 }
 
-.session-button1splash:hover{
+.session-button1-splash:hover{
     border-bottom: 2px solid white;
     cursor: pointer;
     outline: none;
 }
 
-.session-button2splash{
+.session-button1-other{
+    font-family: "Open Sans", "Helvetica Neue", Helvetica;
+    font-size: 16px;
+    color: rgb(72, 72, 72);
+    border: 1px solid grey;
+    background-color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    height: 40px;
+    margin-right: 10px;
+    /* width: 80px; */
+    outline: none;
+}
+
+.session-button1-other:hover{
+    cursor: pointer;
+    background-color: lightgrey;
+    transition: 00.5s;
+    outline: none;
+}
+
+.session-button2-splash{
     font: bold 14px Arial, Helvetica, "Helvetica Neue";
     color: white;
     padding: 7px 24px 8px;
@@ -57,7 +107,28 @@
     background: transparent;
 }
 
-.session-button2splash:hover{
+.session-button2-other{
+    font-family: "Open Sans", "Helvetica Neue", Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    background-color: #F43939;
+    width: 90px;
+    outline: none;
+}
+
+.session-button2-other:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 1px 1px rgb(184, 184, 184);
+    outline: none;
+    background-color: #fc1515;
+}
+
+.session-button2-splash:hover{
     cursor: pointer;
     transition: 0.5s;
     /* background-color: white; */
@@ -65,6 +136,6 @@
     background-color: white;
 }
 
-.session-button2splash:active{
+.session-button2-splash:active{
     outline: none;
 }
