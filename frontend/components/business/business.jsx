@@ -43,15 +43,17 @@ class Business extends React.Component {
                 <div className="business-intro-container">
 
                     <div className="business-pictures-container">
-                        <p>Currently Unavailable</p>
+                        {this.props.business.photoUrls.map((photoUrl, i) => (
+                            <img className="business-pictures" key={i} src={photoUrl} alt=""/>
+                        ))}
                     </div>
                             
                     <div className="business-intro">
                         <div className="business-intro-text">
                             <p>{this.props.business.name}</p>
                             <div className="rating-star-box">
-                                <p>4 stars</p>
-                                <span className="num-reviews">{this.props.business.reviews.length} reviews</span>
+                                <p>(Rating)</p>
+                                <p><span id="num-reviews">{this.props.business.reviews.length} reviews</span></p>
                             </div>
                             <p className="today-hours">Mon: 11:00 AM - 10:00 PM</p>
                         </div>
@@ -68,17 +70,17 @@ class Business extends React.Component {
                 <div className="business-container">
 
                     <div className="business-container-left">
-                        <p className="business-hour">Hours</p>
-                        <div className="business-hour-container">
+                        {/* <p className="business-hour">Hours</p> */}
+                        <div className="business-reviews-container">
                             <div>
                                 <h4 className="business-hour-text">Hours</h4>
-                                <p>Currently Unavailable</p>
+                                <p>Businesss Hours (Currently Unavailable)</p>
                             </div>
                         </div>
                         <div className="business-reviews-container">
                             <div>
                                 <h4 className="reviews-text">Reviews</h4>
-                                <p>Currently Unavailable</p>
+                                <p>Reviews (Currently Unavailable)</p>
                             </div>
                         </div>
                     </div>
