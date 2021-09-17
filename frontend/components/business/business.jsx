@@ -90,11 +90,11 @@ class Business extends React.Component {
                             <a href={`${this.props.business.website}`}>{`${this.props.business.name}.com`}</a>
                             <img src="https://i.ibb.co/tXSmdsh/website-icon.png" alt="website-icon" />
                         </div>
-                        <div className="right-item">
+                        <div className="right-item2">
                             <p>{`${this.props.business.phone}`}</p>
                             <img src="https://i.ibb.co/b1s5S9C/phone-icon.png" alt="website-icon" />
                         </div>
-                        <div className="right-item">
+                        <div className="right-item2">
                             <div>
                                 <p className="address-tag">Get Directions</p>
                                 <p>{`${this.props.business.address}`}</p>
