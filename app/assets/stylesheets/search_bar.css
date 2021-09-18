@@ -73,11 +73,11 @@
     box-shadow: 0px 5px 5px rgb(227, 224, 224);
 }
 
-.search-tag2-splash .search-text::placeholder{
+.search-tag2-splash .search-text-splash::placeholder{
     color: black;
 }
 
-.search-tag2-other .search-text::placeholder{
+.search-tag2-other .search-text-other::placeholder{
     color: black;
 }
 
