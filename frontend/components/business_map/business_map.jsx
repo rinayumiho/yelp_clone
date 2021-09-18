@@ -23,7 +23,6 @@ class BusinessMap extends React.Component{
         this.map = new google.maps.Map(this.mapNode, mapOptions);
         this.MarkerManager = new MarkerManager(this.map);
         this.MarkerManager.updateMarkers(this.props.businesses);
-        $("#map-container").css("position","none !important");
     }
 
     componentDidUpdate(){
@@ -42,13 +41,11 @@ class BusinessMap extends React.Component{
         this.map = new google.maps.Map(this.mapNode, mapOptions);
         this.MarkerManager = new MarkerManager(this.map);
         this.MarkerManager.updateMarkers(this.props.businesses);
-        $("#map-container").css("position","none !important");
     }
 
     render(){
         return(
             <div id="map-container" ref={map => this.mapNode = map }></div>
-            // <div id="map-container" style="width: 300px; height: 300px;" ref={map => this.mapNode = map }></div>
         );
     }
 }

@@ -23,33 +23,31 @@ class Business extends React.Component {
     // }
 
     render(){
-        if (!this.props.business) {
-            return (
-                <div>Currently Unavailable</div>
-            )
+        if(this.props.business === undefined){
+            return <p>waiting for loading</p>;
         }
-
         return (
             <div>
-
-                <div className="business-page-top">
-                    <div className="top-header-container">
+                <div className="business-top">
+                    <div className="index-logo-container">
                         <Link to="/"><img className="top-logo-sign" src="https://i.ibb.co/G37QPsf/yelp-clone-logo-removebg-preview.png" /></Link>
                         <SearchBar formType={this.props.formType} searchBusinesses={this.props.searchBusinesses}/>
+                    </div>  
+                    <div className="top-header-container">
                         <NavBar formType={this.props.formType} user={this.props.user} logout={this.props.logout}/>
-                    </div>    
+                    </div> 
                 </div>
 
-                <div className="business-intro-container">
+                <div className="business-abstract-container">
 
-                    <div className="business-pictures-container">
-                        {this.props.business.photoUrls.map((photoUrl, i) => (
-                            <img className="business-pictures" key={i} src={photoUrl} alt=""/>
+                    <div className="business-pic-container">
+                        {this.props.business.photoUrls.map((photoUrl, idx) => (
+                            <img className="business-pic" key={idx} src={ photoUrl } alt="business-picture"/>
                         ))}
                     </div>
                             
-                    <div className="business-intro">
-                        <div className="business-intro-text">
+                    <div className="business-abstract">
+                        <div className="business-abstract-text">
                             <p>{this.props.business.name}</p>
                             <div className="rating-star-box">
                                 <p>(Rating)</p>
@@ -61,16 +59,13 @@ class Business extends React.Component {
 
                 </div>
 
-                <div className="business-page-link-container">
-                    <div className="business-user-upload-links">
-                        <button className="business-review-button" onClick={() => this.props.history.push(`/businesses/${this.props.business.id}/reviews/create`)}>Write a Review</button>
-                    </div>
+                <div className="business-review-link">
+                    <button className="business-review-button" onClick={() => this.props.history.push(`/businesses/${this.props.business.id}/reviews/create`)}>Write a Review</button>
                 </div>
 
-                <div className="business-container">
+                <div className="business-info-container">
 
                     <div className="business-container-left">
-                        {/* <p className="business-hour">Hours</p> */}
                         <div className="business-reviews-container">
                             <div>
                                 <h4 className="business-hour-text">Hours</h4>
@@ -86,21 +81,25 @@ class Business extends React.Component {
                     </div>
 
                     <div className="business-container-right">
-                        <div className="right-item">
-                            <a href={`${this.props.business.website}`}>{`${this.props.business.name}.com`}</a>
-                            <img src="https://i.ibb.co/tXSmdsh/website-icon.png" alt="website-icon" />
-                        </div>
-                        <div className="right-item2">
-                            <p>{`${this.props.business.phone}`}</p>
-                            <img src="https://i.ibb.co/b1s5S9C/phone-icon.png" alt="website-icon" />
-                        </div>
-                        <div className="right-item2">
-                            <div>
-                                <p className="address-tag">Get Directions</p>
-                                <p>{`${this.props.business.address}`}</p>
-                            </div>
-                            <img src="https://i.ibb.co/6DZ56N1/address-icon.png" alt="website-icon" />
-                        </div>
+                        <ul>
+                            <li>
+                                <a className="business-website-url" href={`${this.props.business.website}`}>{`${this.props.business.name}.com`}</a>
+                                <img className="business-website-tag" src="https://i.ibb.co/tXSmdsh/website-icon.png" alt="website-icon" />
+                                
+                                {/* <img className="business-website-tag" src="https://i.ibb.co/3YRVVmd/website-icon.png" alt="website-icon" /> */}
+                            </li>
+                            <li>
+                                <p className="business-phone">{this.props.business.phone}</p>
+                                <img src="https://i.ibb.co/b1s5S9C/phone-icon.png" alt="website-icon" />
+                            </li>
+                            <li>
+                                <div className="side-info-dir">
+                                    <p className="business-address-tag"> Get Directions </p>
+                                    <p className="business-address-words">{`${this.props.business.address}`}</p>
+                                </div>
+                                <img src="https://i.ibb.co/6DZ56N1/address-icon.png" alt="website-icon" />
+                            </li>
+                        </ul>
                     </div>
 
                 </div>

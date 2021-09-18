@@ -11,9 +11,10 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+    searchBusinesses: search => dispatch(searchBusinesses(search)),
     fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
-    logout: () => dispatch(logout()),
-    searchBusinesses: search => dispatch(searchBusinesses(search))
+    logout: () => dispatch(logout())
+    
 });
 
 
