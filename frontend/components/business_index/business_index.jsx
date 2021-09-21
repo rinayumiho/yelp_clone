@@ -21,15 +21,15 @@ class BusinessIndex extends React.Component{
         }
     }
 
-    componentDidUpdate(prevProps){
-        if(!this.hasSearchContent) this.hasSearchContent = true;
-        let prevSearch = prevProps.location.search.split("=")[1];
-        let curSearch = this.props.location.search.split("=")[1];
-        if(prevSearch !== curSearch){
-            this.setState({ search: curSearch });
-        }
-        window.scrollTo(0, 0)
-    }
+    // componentDidUpdate(prevProps){
+    //     if(!this.hasSearchContent) this.hasSearchContent = true;
+    //     let prevSearch = prevProps.location.search.split("=")[1];
+    //     let curSearch = this.props.location.search.split("=")[1];
+    //     if(prevSearch !== curSearch){
+    //         this.setState({ search: curSearch });
+    //     }
+    //     window.scrollTo(0, 0)
+    // }
 
     render(){
         if (this.hasSearchContent === true && (Object.keys(this.props.businesses).length === 0 || !Array.isArray(this.props.businesses))) {
