@@ -3,28 +3,122 @@ import { Link } from 'react-router-dom';
 import SearchBar from '../search_bar/search_bar';
 import NavBar from '../nav_bar/nav_bar';
 import SplashAbout from '../splash_about/splash_about';
+import ReviewIndexContainer from '../review/review_index_container';
 
 class Business extends React.Component {
     constructor(props) {
         super(props);
+        this.todayDate = new Date;
+        this.avgStar = '';
+        this.oneStar = (<div >
+                        <i id="inv-star"className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="far fa-star str-g fa-xs"></i>
+                        <i className="far fa-star str-g fa-xs"></i>
+                        <i className="far fa-star str-g fa-xs"></i>
+                        <i className="far fa-star str-g fa-xs"></i>
+                        </div>);
+        this.oneHalfStar = (<div >
+                        <i id="inv-star"className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star-half-alt str fa-xs"></i>
+                        <i className="far fa-star str-g fa-xs"></i>
+                        <i className="far fa-star str-g fa-xs"></i>
+                        <i className="far fa-star str-g fa-xs"></i>
+                        </div>);
+        this.twoStar = (<div>
+                        <i id="inv-star" className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="far fa-star str-g fa-xs" ></i>
+                        <i className="far fa-star str-g fa-xs"></i>
+                        <i className="far fa-star str-g fa-xs"></i>
+                    </div>);
+        this.twoHalfStar = (<div>
+                        <i id="inv-star" className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star-half-alt str fa-xs"></i>
+                        <i className="far fa-star str-g fa-xs"></i>
+                        <i className="far fa-star str-g fa-xs"></i>
+                    </div>);
+        this.threeStar = (<div>
+                        <i id="inv-star"className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="far fa-star str-g fa-xs"></i>
+                        <i className="far fa-star str-g fa-xs"></i>
+                    </div>);
+        this.threeHalfStar = (<div>
+                        <i id="inv-star"className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star-half-alt str fa-xs"></i>
+                        <i className="far fa-star str-g fa-xs"></i>
+                    </div>);        
+        this.fourStar = (<div>
+                        <i id="inv-star" className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="far fa-star str-g fa-xs"></i>
+                    </div>);
+        this.fourHalfStar = (<div>
+                        <i id="inv-star" className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i id="half-star"className="fas fa-star-half-alt str fa-xs"></i>
+                    </div>);
+        this.fiveStar = (<div>
+                        <i id="inv-star"className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                        <i className="fas fa-star str fa-xs"></i>
+                    </div>);
     }
 
     componentDidMount(){
         this.props.fetchBusiness(this.props.match.params.businessId);
     }
-    
-    // today_business_hour(){
-    //     const todayDate = new Date().toDateString().split(" ")[0];
-    //     for (let i = 0; i < this.props.business.schedules.length; i++) {
-    //         if (this.props.business.schedules[i].day === todayDate) {
-    //             return `${this.props.business.schedules[i].day}: ${this.props.business.schedules[i].open} - ${this.props.business.schedules[i].close}`
-    //         }
-    //     }
-    // }
 
     render(){
         if(this.props.business === undefined){
             return <p>waiting for loading</p>;
+        }
+        let rating = 0;
+        if(this.props.business.reviews === undefined || this.props.business.reviews.length === 0) {
+            rating = 5.00.toFixed(1);
+        }else {
+            this.props.business.reviews.forEach(review => rating += review.stars);
+
+            rating /= this.props.business.reviews.length;
+            rating = rating.toFixed(1);  
+        }
+        if(rating > 4.9){
+            this.avgStar = this.fiveStar    
+        }else if(rating > 4.4){
+            this.avgStar = this.fourHalfStar
+        }else if(rating > 3.9){
+            this.avgStar = this.fourStar
+        }else if(rating > 3.4){
+            this.avgStar = this.threeHalfStar
+        }else if(rating > 2.9){
+            this.avgStar = this.threeStar
+        }else if(rating > 2.4){
+            this.avgStar = this.twoHalfStar
+        }else if(rating > 1.9){
+            this.avgStar = this.twoStar
+        }else if(rating > 1.4){
+            this.avgStar = this.oneHalfStar
+        }else{
+            this.avgStar = this.oneStar
         }
         return (
             <div>
@@ -50,7 +144,7 @@ class Business extends React.Component {
                         <div className="business-abstract-text">
                             <p>{this.props.business.name}</p>
                             <div className="rating-star-box">
-                                <p>(Rating)</p>
+                                <p>{this.avgStar}</p>
                                 <p><span id="num-reviews">{this.props.business.reviews.length} reviews</span></p>
                             </div>
                             <p className="today-hours">Mon: 11:00 AM - 10:00 PM</p>
@@ -66,17 +160,14 @@ class Business extends React.Component {
                 <div className="business-info-container">
 
                     <div className="business-container-left">
-                        <div className="business-reviews-container">
-                            <div>
-                                <h4 className="business-hour-text">Hours</h4>
-                                <p>Businesss Hours (Currently Unavailable)</p>
-                            </div>
+                        <div className="business-hour-container">
+                            <h4 className="business-hour-text">Hours</h4>
+                            <p>Businesss Hours (Currently Unavailable)</p>
                         </div>
-                        <div className="business-reviews-container">
-                            <div>
-                                <h4 className="reviews-text">Reviews</h4>
-                                <p>Reviews (Currently Unavailable)</p>
-                            </div>
+                        
+                        <div className="review-index-container">
+                            <h4 className="reviews-tag">Reviews</h4>
+                            <ReviewIndexContainer business={this.props.business} />
                         </div>
                     </div>
 
@@ -85,8 +176,6 @@ class Business extends React.Component {
                             <li>
                                 <a className="business-website-url" href={`${this.props.business.website}`}>{`${this.props.business.name}.com`}</a>
                                 <img className="business-website-tag" src="https://i.ibb.co/tXSmdsh/website-icon.png" alt="website-icon" />
-                                
-                                {/* <img className="business-website-tag" src="https://i.ibb.co/3YRVVmd/website-icon.png" alt="website-icon" /> */}
                             </li>
                             <li>
                                 <p className="business-phone">{this.props.business.phone}</p>

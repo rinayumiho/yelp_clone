@@ -121,16 +121,16 @@
     font-weight: 600;
 }
 
-.reviews-text{
+/* .reviews-text{
     font-size: 20px;
     font-weight: bold;
     font-family: "Open Sans", "Helvetica Neue", Helvetica;
     color: #2B273C;
     margin-top: 35px;
     margin-bottom: 35px;
-}
+} */
 
-.business-reviews-container{
+.business-hour-container{
     margin-left: 141px;
     margin-right: 141px;
 }
@@ -208,3 +208,31 @@
 .business-container-right ul li:last-child {
     border-bottom: none
 }
+
+#inv-star{
+    display: none;
+}
+
+.str{
+    color: #F43939;
+}
+
+.str-g{
+    color: white;
+    opacity: 0.4;
+}
+
+.review-index-container{
+    margin-left: 140px;
+    margin-right: 140px;
+}
+
+.reviews-tag{
+    font-family: "Open Sans", "Helvetica Neue", Helvetica;
+    font-size: 19px;
+    font-weight: bold;
+    color: #2B273C;
+    margin-top: 34px;
+    margin-bottom: 34px;
+}
+

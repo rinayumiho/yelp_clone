@@ -1,19 +1,46 @@
-import { RECEIVE_REVIEW, RECEIVE_REVIEWS, RECEIVE_REVIEW_ERRORS, REMOVE_REVIEW } from '../actions/review_actions';
+// import { RECEIVE_REVIEW, RECEIVE_REVIEWS, RECEIVE_REVIEW_ERRORS, REMOVE_REVIEW } from '../actions/review_actions';
 
-const ReviewsReducer = (oldState = {}, action) => {
-    Object.freeze(oldState);
+// const ReviewsReducer = (oldState = {}, action) => {
+//     Object.freeze(oldState);
+//     switch(action.type){
+//         case RECEIVE_REVIEWS:
+//             return action.reviews;
+//         case RECEIVE_REVIEW:
+//             return Object.assign({}, oldState, {[action.review.id]: action.review});
+//         case REMOVE_REVIEW:
+//             const newState = Object.assign({}, oldState);
+//             delete newState[action.review.id];
+//             return newState;
+//         default:
+//             return oldState;
+//     }
+// }
+
+// export default ReviewsReducer;
+
+import {
+    RECEIVE_REVIEW,
+    RECEIVE_REVIEWS,
+    RECEIVE_REVIEW_ERRORS,
+    REMOVE_REVIEW,
+} from '../actions/review_actions';
+
+const ReviewsReducer = (state = {}, action) => {
+    Object.freeze(state);
     switch(action.type){
         case RECEIVE_REVIEWS:
-            return action.reviews;
+            return action.reviews
         case RECEIVE_REVIEW:
-            return Object.assign({}, oldState, {[action.review.id]: action.review});
+            return Object.assign({}, state, {[action.review.id]: action.review})
         case REMOVE_REVIEW:
-            const newState = Object.assign({}, oldState);
-            delete newState[action.review.id];
-            return newState;
+            const newState = Object.assign({}, state)
+            delete newState[action.review.id]
+            return newState
+        case RECEIVE_REVIEW_ERRORS:
+            
         default:
-            return oldState;
+            return state
     }
 }
 
-export default ReviewsReducer;
+export default ReviewsReducer

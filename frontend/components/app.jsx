@@ -11,10 +11,10 @@ const App = () => (
         <Switch>
             <Route exact path="/signup" component={SignupFormContainer} />
             <Route exact path="/login" component={LoginFormContainer} />
-            
             <Route exact path="/businesses/:businessId" component={BusinessContainer} />
             <Route exact path="/businesses" component={BusinessIndexContainer} />
             <Route exact path="/" component={SplashContainer}/>
+            
         </Switch>
     </div>
 );
