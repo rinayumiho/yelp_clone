@@ -78,31 +78,139 @@ class BusinessIndex extends React.Component{
                         <p className="best-in">Best {this.state.search} in Philadelphia, PA.</p>
                         <p className="all-results">All Results</p>
                         <div className="results">
-                            {this.props.businesses.map((business, idx) => (
-                                <div className="each-result-container" key={ idx }>
-                                    <Link className="result-link" to={`/businesses/${ business.id }`}>
-                                        <div className="each-result">
-                                            <img className="rep_pic" src={ business.photoUrls[0] } alt=""/>
-                                            <div className="result-info">
-                                                <div className="result-name">
-                                                    <p>{idx + 1}. </p>
-                                                    <p className="result-name-word">{ business.name }</p>
+                            {this.props.businesses.map((business, idx) => {
+                                let avgStar = '';
+                                let oneStar = (<div >
+                                                <i id="inv-star"className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="far fa-star str-g fa-xs"></i>
+                                                <i className="far fa-star str-g fa-xs"></i>
+                                                <i className="far fa-star str-g fa-xs"></i>
+                                                <i className="far fa-star str-g fa-xs"></i>
+                                                </div>);
+                                let oneHalfStar = (<div >
+                                                <i id="inv-star"className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star-half-alt str fa-xs"></i>
+                                                <i className="far fa-star str-g fa-xs"></i>
+                                                <i className="far fa-star str-g fa-xs"></i>
+                                                <i className="far fa-star str-g fa-xs"></i>
+                                                </div>);
+                                let twoStar = (<div>
+                                                <i id="inv-star" className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="far fa-star str-g fa-xs" ></i>
+                                                <i className="far fa-star str-g fa-xs"></i>
+                                                <i className="far fa-star str-g fa-xs"></i>
+                                                </div>);
+                                let twoHalfStar = (<div>
+                                                <i id="inv-star" className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star-half-alt str fa-xs"></i>
+                                                <i className="far fa-star str-g fa-xs"></i>
+                                                <i className="far fa-star str-g fa-xs"></i>
+                                                </div>);
+                                let threeStar = (<div>
+                                                <i id="inv-star"className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="far fa-star str-g fa-xs"></i>
+                                                <i className="far fa-star str-g fa-xs"></i>
+                                                </div>);
+                                let threeHalfStar = (<div>
+                                                <i id="inv-star"className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star-half-alt str fa-xs"></i>
+                                                <i className="far fa-star str-g fa-xs"></i>
+                                                </div>);        
+                                let fourStar = (<div>
+                                                <i id="inv-star" className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="far fa-star str-g fa-xs"></i>
+                                                </div>);
+                                let fourHalfStar = (<div>
+                                                <i id="inv-star" className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i id="half-star"className="fas fa-star-half-alt str fa-xs"></i>
+                                                </div>);
+                                let fiveStar = (<div>
+                                                <i id="inv-star"className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                <i className="fas fa-star str fa-xs"></i>
+                                                </div>);
+                                let rating = 0;
+                                if(business.reviews === undefined || business.reviews.length === 0) {
+                                    rating = 5.00.toFixed(1);
+                                }else {
+                                    business.reviews.forEach(review => rating += review.stars);
+
+                                    rating /= business.reviews.length;
+                                    rating = rating.toFixed(1);  
+                                }
+                                if(rating > 4.9){
+                                    avgStar = fiveStar;    
+                                }else if(rating > 4.4){
+                                    avgStar = fourHalfStar;
+                                }else if(rating > 3.9){
+                                    avgStar = fourStar;
+                                }else if(rating > 3.4){
+                                    avgStar = threeHalfStar;
+                                }else if(rating > 2.9){
+                                    avgStar = threeStar;
+                                }else if(rating > 2.4){
+                                    avgStar = twoHalfStar;
+                                }else if(rating > 1.9){
+                                    avgStar = twoStar;
+                                }else if(rating > 1.4){
+                                    avgStar = oneHalfStar;
+                                }else{
+                                    avgStar = oneStar;
+                                }
+
+                                return (
+                                    <div className="each-result-container" key={ idx }>
+                                        <Link className="result-link" to={`/businesses/${ business.id }`}>
+                                            <div className="each-result">
+                                                <div className="rep-pic-container">
+                                                    <img className="rep-pic" src={ business.photoUrls[0] } alt=""/>
                                                 </div>
-                                                <div className="result-location">
-                                                    <p className="result-phone">{ business.phone }</p>
-                                                    <p>{ business.address }</p>
-                                                </div>
-                                                <div className="result-rating">
-                                                    <p>Rating (Currently Unavailable)</p>
-                                                </div>
-                                                <div className="result-review">
-                                                    <p>Reviews (Currently Unavailable)</p>
+                                                
+                                                <div className="result-info">
+                                                    <div className="result-name">
+                                                        <p>{idx + 1}. </p>
+                                                        <p className="result-name-word">{ business.name }</p>
+                                                    </div>
+                                                    <div className="result-location">
+                                                        <p className="result-phone">{ business.phone }</p>
+                                                        <p>{ business.address }</p>
+                                                    </div>
+                                                    <div className="result-rating">
+                                                        <p>{avgStar}</p>
+                                                    </div>
+                                                    <div className="result-review">
+                                                        <p className="result-review-text">"{business.reviews.length != 0 ? `${business.reviews[0].body.split(" ").filter((w, i) => i < 30).join(" ")}...` : "Write the first review!"}"</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </Link>
-                                </div>
-                            ))}
+                                        </Link>
+                                    </div>
+                                )
+                                
+                            })}
                         </div>
                     </div>
                     <div className="index-map-box">

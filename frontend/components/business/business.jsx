@@ -102,23 +102,23 @@ class Business extends React.Component {
             rating = rating.toFixed(1);  
         }
         if(rating > 4.9){
-            this.avgStar = this.fiveStar    
+            this.avgStar = this.fiveStar;    
         }else if(rating > 4.4){
-            this.avgStar = this.fourHalfStar
+            this.avgStar = this.fourHalfStar;
         }else if(rating > 3.9){
-            this.avgStar = this.fourStar
+            this.avgStar = this.fourStar;
         }else if(rating > 3.4){
-            this.avgStar = this.threeHalfStar
+            this.avgStar = this.threeHalfStar;
         }else if(rating > 2.9){
-            this.avgStar = this.threeStar
+            this.avgStar = this.threeStar;
         }else if(rating > 2.4){
-            this.avgStar = this.twoHalfStar
+            this.avgStar = this.twoHalfStar;
         }else if(rating > 1.9){
-            this.avgStar = this.twoStar
+            this.avgStar = this.twoStar;
         }else if(rating > 1.4){
-            this.avgStar = this.oneHalfStar
+            this.avgStar = this.oneHalfStar;
         }else{
-            this.avgStar = this.oneStar
+            this.avgStar = this.oneStar;
         }
         return (
             <div>
@@ -143,7 +143,7 @@ class Business extends React.Component {
                             
                     <div className="business-abstract">
                         <div className="business-abstract-text">
-                            <p>{this.props.business.name}</p>
+                            <p class="review-form-business-name">{this.props.business.name}</p>
                             <div className="rating-star-box">
                                 <p>{this.avgStar}</p>
                                 <p><span id="num-reviews">{this.props.business.reviews.length} reviews</span></p>
