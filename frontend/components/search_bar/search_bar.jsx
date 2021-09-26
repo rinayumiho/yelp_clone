@@ -36,13 +36,13 @@ class SearchBar extends React.Component {
                         </button>
                     </div>
                 </form>
-                <div className="search-categories">
+                {/* <div className="search-categories">
                     <p>Plumbers</p>
                     <p>Restaurants</p>
                     <p>Home Services</p>
                     <p>Delivery</p>
                     <p>Black Owned</p>
-                </div>
+                </div> */}
             </div>
         )
     }

@@ -1,0 +1,256 @@
+.review-form-navbar{
+    height: 96px;
+    width: 100%;
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+.review-logo{
+    height: 40px;
+    margin: 27px;
+}
+
+.review-form-navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-nav-spacefill{
+    min-width: 700px;
+}
+
+.review-form-business-name{
+    font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 900;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    color: rgba(43,39,60,1);
+    font-size: 28px;
+}
+
+.review-form-texts{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+}
+
+.review-form-main{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.review-form-guide{
+    font-family: "Open Sans", Helvetica, "Helvetica Neue";
+    font-size: 14px;
+    color: #00838F;
+    margin-left: 360px;
+}
+
+.review-form-guide:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+textarea {
+    resize: none;
+    width: 500px;
+    height: 300px;
+    border: none;
+    outline: none;
+    margin: 30px;
+}
+
+.rating-number{
+    position: relative;
+    left: 40px;
+    bottom: 260px;
+}
+
+.review-content-box{
+    border: rgb(189, 189, 189) solid 1px;
+    border-radius: 4px;
+    height: 450px;
+    width: 631px;
+}
+
+.attach-picture{
+    border: rgb(189, 189, 189) solid 1px;
+    border-radius: 4px;
+    width: 633px;
+    height: 110px;
+    
+}
+
+.attach-picture:hover{
+    border: rgb(167, 167, 167) solid 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 631px;
+    height: 108px;
+}
+
+.review-post-button{
+    position: relative;
+    top: 40px;
+    height: 45px;
+    width: 200px;
+    background-color: #F43939;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, "Helvetica Neue";
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    margin-top: -15px;
+}
+.review-post-button:hover{
+    cursor: pointer;
+    box-shadow: rgb(228, 228, 228) 2px 2px;
+}
+
+.review-form-attach-photos{
+    font-size: 20px;
+    color: #2B273C;
+    font-family: "Open Sans", Helvetica, "Helvetica Neue";
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 24px;
+    margin-left: 5px;
+}
+
+.text-area-text{
+    color: black(237, 237, 237);
+    font-family: "Open Sans", Helvetica, "Helvetica Neue";
+    font-size: 18px;
+}
+
+.text-area-text::-webkit-input-placeholder{
+    color: black;
+    opacity: 0.25;
+}
+
+.select-rating-text{
+    color: rgb(117, 117, 117);
+    font-family: "Open Sans", Helvetica, "Helvetica Neue";
+    font-size: 14px;
+    position: relative;
+    left: 220px;
+    top: 35px;
+}
+
+.add-photo-icon{
+    position: relative;
+    left: 300px;
+    top: 44px;
+}
+
+.rating{
+    margin-left: 30px;
+}
+
+.regulation-background{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    display: none;
+}
+
+.regulation-container-top{
+    background-color: white;
+   position: absolute;
+   border-radius: 5px;
+   width: 560px;
+   height: 630px;
+   top: 50%;
+   left: 44%;
+   transform: translate(-50%, -50%); 
+   border: 1px solid #25859b;
+    box-shadow: 3px 3px 3px grey;
+    z-index: 1000;
+}
+
+.filled{
+    color: red;
+    margin-top: 10px;
+}
+
+.un-filled{
+    color: lightgray;
+    margin-top: 10px;
+}
+
+.content-guidelines{
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif, "Helvetica Neue";
+    font-size: 20px;
+    font-weight: bold;
+    color: #2B273C;
+    margin-top: 30px;
+    margin-left: 25px;
+    border-bottom: 1px solid lightgrey;
+    margin-right: 25px;
+    padding-bottom: 10px;
+}
+
+.x{
+    font-size: 20px;
+    font-weight: normal;
+    color: rgb(173, 173, 173);
+}
+
+.x:hover{
+    cursor: pointer;
+}
+
+.gen-guide{
+    color: #2B273C;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif, "Helvetica Neue";
+    font-size: 17px;
+    font-weight: bold;
+
+}
+
+.regulation-scrollable{
+    height: 518px;
+    width: 483px;
+    overflow-y: auto;
+    position: relative;
+    left: 28px;
+    font-family: Arial, Helvetica, sans-serif, "Helvetica Neue", "Open Sans";
+    font-size: 15px;
+    line-height: 20px;
+    display: list-item;
+}
+
+li span{
+    font-weight: bold;
+}
+
+li{
+    display: list-item;
+}
+
+.review-form-error{
+    color: #D32323;
+    font-family: Arial, Helvetica, sans-serif, "Helvetica Neue", "Open Sans";
+    font-size: 15px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 20px;
+}
+
+.regulation-container-subs{
+    margin: 0 0 0 14px;
+}
+
+.regulation-content{
+    font-weight: bold;
+}

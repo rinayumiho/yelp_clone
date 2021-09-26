@@ -5,7 +5,19 @@ import Root from "./components/root";
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
-    const store = configureStore();
+    let store;
+    if (window.user) {
+        const preloadedState = {
+            session: { id: window.user.id },
+            entities: {
+                users: { [window.user.id]: window.user }
+            }
+        };
+        store = configureStore(preloadedState);
+        delete window.user;
+    } else {
+        store = configureStore();
+    }
 
     window.getState = store.getState;
     window.dispatch = store.dispatch;

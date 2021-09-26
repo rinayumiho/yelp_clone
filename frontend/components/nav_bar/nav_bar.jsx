@@ -15,7 +15,7 @@ class NavBar extends React.Component {
             (
                 <nav className={`nav-main-${this.props.formType}`}>
                     <div className={`nav-main-sub-${this.props.formType}`}>
-                        <p className={`session-button0-${this.props.formType}`}>Write a Review</p>
+                        <p className={`session-button0-${this.props.formType}`}>{this.props.formType === "splash" ? "Write a Review" : ""}</p>
                         <p className={`session-button0-${this.props.formType}`}>{this.props.formType === "splash" ? "Events" : ""}</p>
                         <p className={`session-button0-${this.props.formType}`}>{this.props.formType === "splash" ? "Talk" : ""}</p>
                     </div>
@@ -29,9 +29,9 @@ class NavBar extends React.Component {
             (
                 <div className={`nav-main-${this.props.formType}`}>
                     <div className={`nav-main-sub-${this.props.formType}`}>
-                        <p className={`session-button0-${this.props.formType}`}>Write a Review</p>
-                        <p className={`session-button0-${this.props.formType}`}>Events</p>
-                        <p className={`session-button0-${this.props.formType}`}>Talk</p>
+                        <p className={`session-button0-${this.props.formType}`}>{this.props.formType === "splash" ? "Write a Review" : ""}</p>
+                        <p className={`session-button0-${this.props.formType}`}>{this.props.formType === "splash" ? "Events" : ""}</p>
+                        <p className={`session-button0-${this.props.formType}`}>{this.props.formType === "splash" ? "Talk" : ""}</p>
                     </div>
                     <div className={`nav-main-sub-${this.props.formType}`}>
                         <div className="drpbtwn">

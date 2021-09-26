@@ -20,13 +20,22 @@
     width: 450px;
 }
 
-.nav-main-sub-splash{
+.nav-main-review_pages{
+    position: relative;
+    z-index: 1;
+    top: 25px;
+    display: flex;
+    justify-content: flex-end;
+    width: 450px;
+}
+
+.nav-main-sub-splash {
     position: relative;
     display: flex;
     justify-content: center;
 }
 
-.nav-main-sub-other{
+.nav-main-sub-other {
     position: relative;
     display: flex;
     justify-content: center;

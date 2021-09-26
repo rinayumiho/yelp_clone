@@ -123,6 +123,7 @@ class Business extends React.Component {
         return (
             <div>
                 <div className="business-top">
+                {/* <div className="business-page-top-container"> */}
                     <div className="index-logo-container">
                         <Link to="/"><img className="top-logo-sign" src="https://i.ibb.co/G37QPsf/yelp-clone-logo-removebg-preview.png" /></Link>
                         <SearchBar formType={this.props.formType} searchBusinesses={this.props.searchBusinesses}/>
