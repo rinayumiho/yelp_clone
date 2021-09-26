@@ -240,3 +240,26 @@
 .fa-xs{
     font-size: 1em;
 }
+
+.map-box{
+    width: 315px;
+    height: 200px;
+}
+
+.location-hours-text{
+    font-family: "Open Sans", Helvetica, "Helvetica Neue";
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    padding-top: 25px;
+}
+
+.business-street{
+    font-size: 16px;
+    font-weight: bold;
+    color: #2B273C;
+    font-family: "Open Sans", Helvetica, "Helvetica Neue", Arial;
+    margin-top: 22px;
+    margin-bottom: 5px;
+}

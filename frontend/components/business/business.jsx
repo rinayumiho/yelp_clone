@@ -4,6 +4,7 @@ import SearchBar from '../search_bar/search_bar';
 import NavBar from '../nav_bar/nav_bar';
 import SplashAbout from '../splash_about/splash_about';
 import ReviewIndexContainer from '../review/review_index_container';
+import BusinessMap from '../business_map/business_map';
 
 class Business extends React.Component {
     constructor(props) {
@@ -161,9 +162,32 @@ class Business extends React.Component {
                 <div className="business-info-container">
 
                     <div className="business-container-left">
-                        <div className="business-hour-container">
-                            <h4 className="business-hour-text">Hours</h4>
-                            <p>Businesss Hours (Currently Unavailable)</p>
+                        <div className="business-location-hour-container">
+                            <div>
+                                <p className="location-hours-text">Location and Hours</p>
+                                <div className="business-location-hour-box">
+                                    <div className="business-location">
+                                        <div className="map-box">
+                                            <BusinessMap businesses={this.props.business}/>
+                                        </div>
+
+                                        <p className="business-street">{this.props.business.address}</p>
+                                    </div>
+                                    <div className="business-schedule">
+                                        {/* <div className="schedule-day">
+                                            {this.props.business.schedules.map((schedule, i) => (
+                                                <div className="each-schedule-day" key={i}>{schedule.day}</div>     
+                                            ))}
+                                        </div>
+                                        <div className="schedule-hours">
+                                            {this.props.business.schedules.map((schedule, i) => (
+                                                    <div className="each-schedule-hours" key={i}>{schedule.open} - {schedule.close}</div>
+                                            ))}
+                                        </div> */}
+                                        
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         
                         <div className="review-index-container">

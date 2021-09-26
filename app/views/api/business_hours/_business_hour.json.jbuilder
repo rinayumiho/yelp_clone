@@ -1,0 +1,1 @@
+json.extract! business_hour, :id, :business_id, :monday_hour, :tuesday_hour, :wednesday_hour, :thursday_hour, :friday_hour, :saturday_hour, :sunday_hour
