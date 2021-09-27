@@ -6,6 +6,7 @@ class ReviewIndex extends React.Component {
         super(props);
         this.update = false;
     }
+    
     componentDidMount(){
         this.props.fetchReviews(this.props.business.id);
     }

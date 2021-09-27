@@ -8,7 +8,7 @@ class Business < ApplicationRecord
         class_name: :Review,
         dependent: :destroy
 
-    has_one :business_hour,
+    has_many :business_hours,
         primary_key: :id,
         foreign_key: :business_id,
         class_name: :BusinessHour,

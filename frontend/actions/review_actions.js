@@ -5,7 +5,7 @@ export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
 export const REMOVE_REVIEW = "REMOVE_REVIEW";
 
 
-const receiveReview = (review) => ({
+const receiveReview = review => ({
     type: RECEIVE_REVIEW,
     review
 });
@@ -25,7 +25,7 @@ const removeReview = review => ({
     review
 });
 
-export const fetchReviews = (businessId) => dispatch => (
+export const fetchReviews = businessId => dispatch => (
     ApiReviewUtil.fetchReviews(businessId)
         .then(reviews => dispatch(receiveReviews(reviews)))
 );

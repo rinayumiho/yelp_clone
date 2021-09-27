@@ -5,6 +5,7 @@ import NavBar from '../nav_bar/nav_bar';
 import SplashAbout from '../splash_about/splash_about';
 import ReviewIndexContainer from '../review/review_index_container';
 import BusinessMap from '../business_map/business_map';
+import BusinessHourContainer from '../business_hour/business_hour_container';
 
 class Business extends React.Component {
     constructor(props) {
@@ -173,40 +174,28 @@ class Business extends React.Component {
 
                                         <p className="business-street">{this.props.business.address}</p>
                                     </div>
-                                    <div className="business-schedule">
-                                        {/* <div className="schedule-day">
-                                            {this.props.business.schedules.map((schedule, i) => (
-                                                <div className="each-schedule-day" key={i}>{schedule.day}</div>     
-                                            ))}
-                                        </div>
-                                        <div className="schedule-hours">
-                                            {this.props.business.schedules.map((schedule, i) => (
-                                                    <div className="each-schedule-hours" key={i}>{schedule.open} - {schedule.close}</div>
-                                            ))}
-                                        </div> */}
-                                        
-                                    </div>
+                                    <BusinessHourContainer business={this.props.business}/>
                                 </div>
                             </div>
                         </div>
                         
                         <div className="review-index-container">
                             <h4 className="reviews-tag">Reviews</h4>
-                            <ReviewIndexContainer business={this.props.business} />
+                            <ReviewIndexContainer business={this.props.business}/>
                         </div>
                     </div>
 
                     <div className="business-container-right">
                         <ul>
-                            <li>
+                            <li class="business-container-right-list">
                                 <a className="business-website-url" href={`${this.props.business.website}`}>{`${this.props.business.name}.com`}</a>
                                 <img className="business-website-tag" src="https://i.ibb.co/tXSmdsh/website-icon.png" alt="website-icon" />
                             </li>
-                            <li>
+                            <li class="business-container-right-list">
                                 <p className="business-phone">{this.props.business.phone}</p>
                                 <img src="https://i.ibb.co/b1s5S9C/phone-icon.png" alt="website-icon" />
                             </li>
-                            <li>
+                            <li class="business-container-right-list">
                                 <div className="side-info-dir">
                                     <p className="business-address-tag"> Get Directions </p>
                                     <p className="business-address-words">{`${this.props.business.address}`}</p>

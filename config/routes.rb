@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :businesses, only: [:index, :show] do 
       resources :reviews, only: [:show, :create, :index, :update, :destroy]
+      resources :business_hours, only: [:index]
     end
   end
 end

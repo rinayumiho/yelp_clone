@@ -1,6 +1,6 @@
-export const fetchBusinessHour = businessId => (
+export const fetchBusinessHours = businessId => (
     $.ajax({
         method: "GET",
-        url: `/api/businesses/${businessId}/business_hour`
+        // url: `/api/businesses/${businessId}/businessHours`
     })
 );

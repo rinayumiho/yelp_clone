@@ -116,3 +116,14 @@ business2.photos.attach(io: file2_2, filename: "kpot2.jpg")
 business2.photos.attach(io: file2_3, filename: "kpot3.jpg")
 business2.photos.attach(io: file2_4, filename: "kpot4.jpg")
 business2.photos.attach(io: file2_5, filename: "kpot5.jpg")
+
+business_hour2 = BusinessHour.create!(
+    business_id: business2.id,
+    monday_hour: "9:00 AM - 10:00 PM",
+    tuesday_hour: "9:00 AM - 10:00 PM",
+    wednesday_hour: "9:00 AM - 10:00 PM",
+    thursday_hour: "9:00 AM - 10:00 PM",
+    friday_hour: "9:00 AM - 10:00 PM",
+    saturday_hour: "11:00 AM - 12:00 PM",
+    sunday_hour: "11:00 AM - 12:00 PM"
+)
