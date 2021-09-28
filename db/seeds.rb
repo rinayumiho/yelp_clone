@@ -47,7 +47,10 @@ business1 = Business.create!(
     longitude: -74.94003325978738,
     latitude: 40.09179579481741,
     city: "Bensalman",
-    state: "PA"
+    state: "PA",
+    price: 2,
+    categories: "American Mexican Steak",
+    claimed: true
 )
 
 file1_1 = URI.open('https://yulp-seeds.s3.amazonaws.com/texasroadhouse0.jpg')
@@ -85,13 +88,13 @@ review1_3 = Review.create!(
 
 business_hour1 = BusinessHour.create!(
     business_id: business1.id,
-    monday_hour: "11:00 AM - 10:00 PM",
-    tuesday_hour: "11:00 AM - 10:00 PM",
-    wednesday_hour: "11:00 AM - 10:00 PM",
-    thursday_hour: "11:00 AM - 10:00 PM",
-    friday_hour: "11:00 AM - 10:00 PM",
-    saturday_hour: "11:00 AM - 10:00 PM",
-    sunday_hour: "11:00 AM - 10:00 PM"
+    monday_hour: "111:00 AM - 10:00 PM",
+    tuesday_hour: "211:00 AM - 10:00 PM",
+    wednesday_hour: "311:00 AM - 10:00 PM",
+    thursday_hour: "411:00 AM - 10:00 PM",
+    friday_hour: "511:00 AM - 10:00 PM",
+    saturday_hour: "611:00 AM - 10:00 PM",
+    sunday_hour: "011:00 AM - 10:00 PM"
 )
 
 business2 = Business.create!(
@@ -102,7 +105,9 @@ business2 = Business.create!(
     longitude: -74.96296075978744,
     latitude: 40.09264904690322, 
     city: "Philadelphia",
-    state: "PA"
+    state: "PA",
+    price: 3,
+    categories: "Korean BBQ Hot-Pot"
 )
 
 file2_1 = URI.open('https://yulp-seeds.s3.amazonaws.com/kpot1.jpg')
@@ -119,11 +124,11 @@ business2.photos.attach(io: file2_5, filename: "kpot5.jpg")
 
 business_hour2 = BusinessHour.create!(
     business_id: business2.id,
-    monday_hour: "9:00 AM - 10:00 PM",
-    tuesday_hour: "9:00 AM - 10:00 PM",
-    wednesday_hour: "9:00 AM - 10:00 PM",
-    thursday_hour: "9:00 AM - 10:00 PM",
-    friday_hour: "9:00 AM - 10:00 PM",
-    saturday_hour: "11:00 AM - 12:00 PM",
-    sunday_hour: "11:00 AM - 12:00 PM"
+    monday_hour: "19:00 AM - 10:00 PM",
+    tuesday_hour: "29:00 AM - 10:00 PM",
+    wednesday_hour: "39:00 AM - 10:00 PM",
+    thursday_hour: "49:00 AM - 10:00 PM",
+    friday_hour: "59:00 AM - 10:00 PM",
+    saturday_hour: "611:00 AM - 12:00 PM",
+    sunday_hour: "011:00 AM - 12:00 PM"
 )

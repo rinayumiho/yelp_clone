@@ -181,6 +181,13 @@ class BusinessIndex extends React.Component{
                                     avgStar = oneStar;
                                 }
 
+                                let price = "$";
+                                if(business.price === 2){
+                                    price = "$$";
+                                }else if(business.price === 3){
+                                    price ="$$$";
+                                }
+                                let categoriesArr = business.categories.split(" ");
                                 return (
                                     <div className="each-result-container" key={ idx }>
                                         <Link className="result-link" to={`/businesses/${ business.id }`}>
@@ -200,6 +207,14 @@ class BusinessIndex extends React.Component{
                                                     </div>
                                                     <div className="result-rating">
                                                         <p>{avgStar}</p>
+                                                        <p className="result-num-reviews">{business.reviews.length === 0 ? "" : `${business.reviews.length} review(s)`}</p>
+                                                    </div>
+                                                    <div className="result-details">
+                                                        <span>{price}</span>
+                                                        
+                                                        {categoriesArr.map((c, idx) => (
+                                                            <span className="result-bullet" key={idx}>&#8226; {c}</span>
+                                                        ))}
                                                     </div>
                                                     <div className="result-review">
                                                         <p className="result-review-text">"{business.reviews.length != 0 ? `${business.reviews[0].body.split(" ").filter((w, i) => i < 30).join(" ")}...` : "Write the first review!"}"</p>

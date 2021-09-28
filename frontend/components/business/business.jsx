@@ -10,7 +10,6 @@ import BusinessHourContainer from '../business_hour/business_hour_container';
 class Business extends React.Component {
     constructor(props) {
         super(props);
-        this.todayDate = new Date;
         this.avgStar = '';
         this.oneStar = (<div >
                         <i id="inv-star"className="fas fa-star str fa-xs"></i>
@@ -122,6 +121,13 @@ class Business extends React.Component {
         }else{
             this.avgStar = this.oneStar;
         }
+        let price = "$";
+        if(this.props.business.price === 2){
+            price = "$$";
+        }else if(this.props.business.price === 3){
+            price ="$$$";
+        }
+        let categoriesArr = this.props.business.categories.split(" ");
         return (
             <div>
                 <div className="business-top">
@@ -150,8 +156,17 @@ class Business extends React.Component {
                                 <p>{this.avgStar}</p>
                                 <p><span id="num-reviews">{this.props.business.reviews.length} reviews</span></p>
                             </div>
-                            <p className="today-hours">Mon: 11:00 AM - 10:00 PM</p>
+                            
                         </div>
+                        <p className="today-hours">
+                            {this.props.business.claimed? <span className="claimed-business"><i class="fas fa-check-circle claimed-business-icon"></i> Claimed</span> : <span className="unclaimed-business"><i class="fas fa-times-circle claimed-business-icon"></i> Unclaimed</span>}
+                            <span className="result-bullet">&#8226;</span>
+                            <span>{price}</span>
+                                                    
+                            {categoriesArr.map((c, idx) => (
+                                <span className="result-bullet" key={idx}>&#8226; {c}</span>
+                            ))}
+                        </p>
                     </div>
 
                 </div>

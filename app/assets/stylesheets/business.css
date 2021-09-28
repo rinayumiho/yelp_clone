@@ -41,6 +41,7 @@
 .business-abstract{
     position: relative;
     display: flex;
+    flex-direction: column;
     bottom: 195px;
 }
 
@@ -121,6 +122,10 @@
 
 .today-hours{
     font-weight: 600;
+    font-size: 20px;
+    color: white;
+    margin-left: 139px;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 /* .reviews-text{
@@ -286,7 +291,7 @@
     position: relative;
     /* top: -28px; */
     line-height: 25px;
-    left: 180px
+    left: 120px
 }
 
 .business-hour-left{
@@ -303,4 +308,20 @@
     margin-bottom: 10px;
     font-family: "Open Sans", Helvetica, "Helvetica Neue";
     margin-bottom: 11px;
+}
+
+.claimed-business{
+    color: rgba(10,179,201,1);
+}
+
+.unclaimed-business{
+    color: #757280;
+}
+
+.open-tag{
+    color: rgba(5,168,130,1);
+}
+
+.closed-tag{
+    color: rgba(244,57,57,1);
 }

@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 class SplashBusinesses extends React.Component {
     constructor(props) {
@@ -13,7 +15,7 @@ class SplashBusinesses extends React.Component {
     render(){
         return(
             <div>
-                <p className="splash-businesses-title">Hot and New Business</p>
+                <p className="splash-businesses-title">Hot and New Businesses</p>
                 <div className="splash-businesses-container">
                     <div className="splash-businesses-item" onClick={() => this.handleClick("Chinese")}>
                         <div className="splash-businesses-pic-container">
@@ -45,4 +47,7 @@ class SplashBusinesses extends React.Component {
     }
 }
 
-export default SplashBusinesses;
+const mapStateToProps = (state, ownProps) => ({});
+const mapDispatchToProps = dispatch => ({});
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SplashBusinesses));

@@ -6,7 +6,8 @@ class Api::BusinessesController < ApplicationController
 
     def index 
         if params[:query]
-            @businesses = Business.all.select{ |ele| ele.name.downcase.include?(params[:query].downcase) }
+            @businesses = Business.all.select{ |ele| ele.name.downcase.include?(params[:query].downcase) || 
+                ele.categories.downcase.include?(params[:query].downcase) }
         else
             @businesses = Business.all
         end
@@ -16,6 +17,6 @@ class Api::BusinessesController < ApplicationController
     private
 
     def business_params
-        params.require(:business).permit(:name, :website, :phone, :address, :longitude, :latitude, :city, :state, photos: [])
+        params.require(:business).permit(:name, :website, :phone, :address, :longitude, :latitude, :city, :state, :price, :categories, :claimed, photos: [])
     end
 end

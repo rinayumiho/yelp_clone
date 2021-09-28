@@ -1,1 +1,1 @@
-json.extract! business, :id, :name, :website, :phone, :address, :longitude, :latitude, :city, :state
+json.extract! business, :id, :name, :website, :phone, :address, :longitude, :latitude, :city, :state, :price, :categories, :claimed
