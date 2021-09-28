@@ -1,6 +1,7 @@
 .splash-businesses-container{
     display: flex;
     justify-content: space-around;
+    /* width: 900px; */
 }
 
 .splash-businesses-title{
@@ -47,3 +48,7 @@
     height: 200px;
     overflow: hidden;
 } */
+.splash-businesses-container{
+    padding-left: 220px;
+    padding-right: 220px;
+}

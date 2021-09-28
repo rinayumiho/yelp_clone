@@ -120,7 +120,7 @@ class ReviewShow extends React.Component {
             } else {
                 return (
                     <div className="invisible">
-                        Hey
+                        ...
                     </div>
                 )
             }
