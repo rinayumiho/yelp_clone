@@ -9,13 +9,14 @@ class SplashBusinesses extends React.Component {
     }
 
     handleClick(type) {
+        window.scrollTo(0, 0);
         this.props.searchBusinesses(type).then(() => this.props.history.push(`/businesses?query=${type}`))
     }
 
     render(){
         return(
             <div>
-                <p className="splash-businesses-title">Hot and New Businesses</p>
+                <p className="splash-businesses-title">Hot Business Categories</p>
                 <div className="splash-businesses-container">
                     <div className="splash-businesses-item" onClick={() => this.handleClick("Chinese")}>
                         <div className="splash-businesses-pic-container">

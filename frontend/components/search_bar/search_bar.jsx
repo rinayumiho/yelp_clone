@@ -16,8 +16,8 @@ class SearchBar extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        // debugger
         this.props.searchBusinesses(this.state.query).then(() => this.props.history.push(`/businesses?query=${this.state.query}`));
+        window.scrollTo(0, 0);
     }
 
     render(){
@@ -26,7 +26,7 @@ class SearchBar extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <div className={`search-bar-${this.props.formType}`}>
                         <label className={`search-tag1-${this.props.formType}`}>Find
-                            <input className={`search-text-${this.props.formType}`} type="text" placeholder="nail salons, plumbers, takeout..." onChange={this.update('query')}/>
+                            <input className={`search-text-${this.props.formType}`} type="text" placeholder="Steak, BBQ, Hot Pot..." onChange={this.update('query')}/>
                         </label>
                         <label className={`search-tag2-${this.props.formType}`}>Near
                             <input className={`search-text-${this.props.formType}`} type="text" placeholder="Philadelphia, PA" />

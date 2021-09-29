@@ -12,12 +12,12 @@ class BusinessMap extends React.Component{
             mapOptions = {
                 center: { lat: this.props.businesses[0].latitude, lng: this.props.businesses[0].longitude},
                 // center: { lat: 41, lng: -74},
-                zoom: 13
+                zoom: 11
             };
         }else{
             mapOptions = {
                 center: { lat: this.props.businesses.latitude, lng: this.props.businesses.longitude},
-                zoom: 13
+                zoom: 11
             };
         }
         this.map = new google.maps.Map(this.mapNode, mapOptions);
@@ -30,12 +30,12 @@ class BusinessMap extends React.Component{
         if (Array.isArray(this.props.businesses)) {
                 mapOptions = {
                 center: { lat: this.props.businesses[0].latitude, lng: this.props.businesses[0].longitude},
-                zoom: 13
+                zoom: 11
             };
         }else{
             mapOptions = {
                 center: { lat: this.props.businesses.latitude, lng: this.props.businesses.longitude},
-                zoom: 13
+                zoom: 11
             };
         }
         this.map = new google.maps.Map(this.mapNode, mapOptions);

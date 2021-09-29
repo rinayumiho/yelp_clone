@@ -34,14 +34,14 @@ class BusinessHour extends React.Component {
         }
         if(curHour < startHour || curHour === startHour && curMin < startMin){
             // return "Closed";
-            return <span className="closed-tag">Closed</span>;
+            return <span className="closed-tag">Closed Now</span>;
         }
         if(curHour > endHour || curHour === endHour && curMin > endMin){
             // return "Closed";
-            return <span className="closed-tag">Closed</span>;
+            return <span className="closed-tag">Closed Now</span>;
         }
         // return "Open"
-        return <span className="open-tag">Open</span>;
+        return <span className="open-tag">Open Now</span>;
     }
 
     render(){
@@ -58,13 +58,13 @@ class BusinessHour extends React.Component {
                     <div class="each-business-hour-left">Sun</div>
                 </div>
                 <div>
-                    <div class="each-business-hour-right">{businessHour.monday_hour.slice(1)}<span>&nbsp;&nbsp;&nbsp;{this.openState(businessHour.monday_hour)}</span></div>
+                    <div class="each-business-hour-right">{businessHour.monday_hour.slice(1)}    <span>&nbsp;&nbsp;&nbsp;{this.openState(businessHour.monday_hour)}</span></div>
                     <div class="each-business-hour-right">{businessHour.tuesday_hour.slice(1)}    <span>&nbsp;&nbsp;&nbsp;{this.openState(businessHour.tuesday_hour)}</span></div>
-                    <div class="each-business-hour-right">{businessHour.wednesday_hour.slice(1)}    {this.openState(businessHour.wednesday_hour)}</div>
-                    <div class="each-business-hour-right">{businessHour.thursday_hour.slice(1)}    {this.openState(businessHour.thursday_hour)}</div>
-                    <div class="each-business-hour-right">{businessHour.friday_hour.slice(1)}    {this.openState(businessHour.friday_hour)}</div>
-                    <div class="each-business-hour-right">{businessHour.saturday_hour.slice(1)}    {this.openState(businessHour.saturday_hour)}</div>
-                    <div class="each-business-hour-right">{businessHour.sunday_hour.slice(1)}    {this.openState(businessHour.sunday_hour)}</div>
+                    <div class="each-business-hour-right">{businessHour.wednesday_hour.slice(1)}    <span>&nbsp;&nbsp;&nbsp;{this.openState(businessHour.wednesday_hour)}</span></div>
+                    <div class="each-business-hour-right">{businessHour.thursday_hour.slice(1)}    <span>&nbsp;&nbsp;&nbsp;{this.openState(businessHour.thursday_hour)}</span></div>
+                    <div class="each-business-hour-right">{businessHour.friday_hour.slice(1)}    <span>&nbsp;&nbsp;&nbsp;{this.openState(businessHour.friday_hour)}</span></div>
+                    <div class="each-business-hour-right">{businessHour.saturday_hour.slice(1)}    <span>&nbsp;&nbsp;&nbsp;{this.openState(businessHour.saturday_hour)}</span></div>
+                    <div class="each-business-hour-right">{businessHour.sunday_hour.slice(1)}    <span>&nbsp;&nbsp;&nbsp;{this.openState(businessHour.sunday_hour)}</span></div>
                 </div>
             </div>
         )

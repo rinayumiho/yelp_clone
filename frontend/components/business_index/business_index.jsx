@@ -21,15 +21,15 @@ class BusinessIndex extends React.Component{
         }
     }
 
-    // componentDidUpdate(prevProps){
-    //     if(!this.hasSearchContent) this.hasSearchContent = true;
-    //     let prevSearch = prevProps.location.search.split("=")[1];
-    //     let curSearch = this.props.location.search.split("=")[1];
-    //     if(prevSearch !== curSearch){
-    //         this.setState({ search: curSearch });
-    //     }
-    //     window.scrollTo(0, 0)
-    // }
+    componentDidUpdate(prevProps){
+        if(!this.hasSearchContent) this.hasSearchContent = true;
+        let prevSearch = prevProps.location.search.split("=")[1];
+        let curSearch = this.props.location.search.split("=")[1];
+        if(prevSearch !== curSearch){
+            this.setState({ search: curSearch });
+        }
+        window.scrollTo(0, 0)
+    }
 
     render(){
         if (this.hasSearchContent === true && (Object.keys(this.props.businesses).length === 0 || !Array.isArray(this.props.businesses))) {
@@ -75,7 +75,7 @@ class BusinessIndex extends React.Component{
                 </div>
                 <div className="business-index-main">
                     <div>
-                        <p className="best-in">Best {this.state.search} in Philadelphia, PA.</p>
+                        <p className="best-in">Best {this.state.search} near Philadelphia, PA.</p>
                         <p className="all-results">All Results</p>
                         <div className="results">
                             {this.props.businesses.map((business, idx) => {
