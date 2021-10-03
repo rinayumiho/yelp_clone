@@ -222,9 +222,11 @@ class Business extends React.Component {
 
                 </div>
 
-                <div className="splash-about">
-                    <SplashAbout></SplashAbout>
-                </div>
+                <footer>
+                    <div className="splash-about">
+                        <SplashAbout></SplashAbout>
+                    </div>
+                </footer>
             </div>
         )
     }

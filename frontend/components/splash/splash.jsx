@@ -32,9 +32,12 @@ class Splash extends React.Component {
                 <div className="splash_businesses">
                     <SplashBusinesses searchBusinesses={this.props.searchBusinesses}></SplashBusinesses>
                 </div>
-                <div>
-                    <SplashAbout></SplashAbout>
-                </div>
+                <footer>
+                    <div>
+                        <SplashAbout></SplashAbout>
+                    </div>
+                </footer>
+                
             </div>
         );
     }

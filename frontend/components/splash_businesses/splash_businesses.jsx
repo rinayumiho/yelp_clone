@@ -16,7 +16,7 @@ class SplashBusinesses extends React.Component {
     render(){
         return(
             <div>
-                <p className="splash-businesses-title">Hot Business Categories</p>
+                <p className="splash-businesses-title">Popular Search Business Categories</p>
                 <div className="splash-businesses-container">
                     <div className="splash-businesses-item" onClick={() => this.handleClick("Chinese")}>
                         <div className="splash-businesses-pic-container">

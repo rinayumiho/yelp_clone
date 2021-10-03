@@ -232,9 +232,12 @@ class BusinessIndex extends React.Component{
                         <BusinessMap businesses={ this.props.businesses }/>
                     </div>
                 </div>
-                <div className="splash-about">
-                    <SplashAbout></SplashAbout>
-                </div>
+                <br />
+                <footer>
+                    <div className="splash-about">
+                        <SplashAbout></SplashAbout>
+                    </div>
+                </footer>
             </div>
         );
     }

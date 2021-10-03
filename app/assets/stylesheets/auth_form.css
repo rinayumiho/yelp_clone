@@ -185,3 +185,12 @@
 .sign-up-name{
     padding: 0px 0px 0px 9px;
 }
+
+.session-form-term{
+    color: rgb(0, 106, 198);
+}
+
+.session-form-term:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
