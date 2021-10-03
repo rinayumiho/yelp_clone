@@ -74,8 +74,6 @@ class LoginForm extends React.Component {
                                         onChange={this.update("password")} 
                                         className="session-form-input"/>
                                     <br />
-                                    <p className="session-form-bottom">Forgot password?</p>
-                                    <br />
                                     <input type="submit" value="Log In" className="submit"/>
                                 </form>
                                 <button className="demo-user-submit"onClick={() => this.props.processForm(this.demo).then(() => this.props.history.push(`/`))}>Demo User</button>
