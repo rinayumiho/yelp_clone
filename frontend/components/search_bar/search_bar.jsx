@@ -32,7 +32,7 @@ class SearchBar extends React.Component {
                             <input className={`search-text-${this.props.formType}`} type="text" placeholder="Philadelphia, PA" />
                         </label>
                         <button type="submit" className="search-icon-buttonsplash">
-                            <img src="http://d5yem10y0aabn.cloudfront.net/search_icon.png" alt="search icon"/>
+                            <img src="https://i.ibb.co/B45HM6R/search-icon.png" alt="search icon"/>
                         </button>
                     </div>
                 </form>

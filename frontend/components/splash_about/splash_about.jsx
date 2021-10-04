@@ -24,7 +24,7 @@ const SplashAbout = props => (
             
             </div>  
         </div>
-        <img className="bottom-image"src="http://d5yem10y0aabn.cloudfront.net/yelp_footer.png" alt="bottom-pic"/>
+        <img className="bottom-image" src="https://i.ibb.co/W0wBZK3/yelp-footer.png" alt="bottom-pic"/>
     </div>
 )
 
