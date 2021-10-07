@@ -22,7 +22,7 @@ jbuilder | Google Map API
 
 The User authentication feature allows users to create their account and have access to the functionality such as rating or writing reviews for businesses.
 
-Backend
+##### Backend
 
 ```
   class User < ApplicationRecord
@@ -80,25 +80,28 @@ Backend
   end
 ```
 
-Frontend
 
-!!!!sign up pic
+##### Frontend
+
+![auth](https://github.com/rinayumiho/yulp/blob/main/app/assets/images/yulp-sign-up.PNG)
+
+
 
 * ### Business Index and Show Pages
 
 The Business index pages list all businesses/searched businesses with their overall rating, price, categories, and one of its reviews
 has set of photos of that is being hosted on AWS S3. The Google Maps API pinpoints exactly where the restaurant is located based on latitude and longitude coordinates.
 
-!!!!business index pic
+![business index](https://github.com/rinayumiho/yulp/blob/main/app/assets/images/yulp-business-index.PNG)
 
 A Business Show page contains its photos that are hosted on AWS S3, business hours, write a review button for logged in users, and review index page.
 
-!!!!business show pic
+![business show](https://github.com/rinayumiho/yulp/blob/main/app/assets/images/yulp-business-show.PNG)
 
 The Google Map API pinpoints exactly where the businesses locations in both index and show pages. 
 The number in the marker agree with the number of the businesses in the index page. A small window with the business name will pop up once users put cursor on the marker.
 
-Backend
+##### Backend
 
 ```
   let mapOptions;
@@ -118,9 +121,11 @@ Backend
   this.MarkerManager.updateMarkers(this.props.businesses);
 ```
 
-Fontend
+##### Fontend
 
-!!!!google map pic
+![map](https://github.com/rinayumiho/yulp/blob/main/app/assets/images/yulp-google-map.PNG)
+
+
 
 * ### Business Hours
 
@@ -130,8 +135,7 @@ In order to implement the open/closed functionality, I created a function called
 The first number indicates the day. Here the "3" means Wednesday. From the timeRange the information of day, startHour, startMin, endHour and endMin can be obtained.
 By comparing them with today's day and current time, the openState function will return "Open Now" or "Closed Now" if day matches, or an empty string if the day doesn't match.
 
-Backend
-
+##### Backend
 ```
     openState(timeRange){
         let firstColon = timeRange.indexOf(":");
@@ -166,17 +170,19 @@ Backend
     }
 ```
 
-Fontend
+##### Fontend
 
-!!!!business hours pic
+![hour](https://github.com/rinayumiho/yulp/blob/main/app/assets/images/yulp-business-hour.PNG)
+
+
 
 * ## Reviews
 
 All the reviews under a business can be views by anyone.
 
-Fontend
+##### Fontend
 
-!!!!reviews index pic
+![review index](https://github.com/rinayumiho/yulp/blob/main/app/assets/images/yulp-review-index.PNG)
 
 If users want to click the red button to write a review for the business, they should sign up and log in first.
 
@@ -185,8 +191,8 @@ The review form is shown as a block. The logged in users need to rate and write 
 In order to realize the rating functionality, I imported react rating component with symbol in Awesome Font to let users decide how many "stars" they want to give.
 Each rating also has a tag, from "Not Good" to "Great".
 
-Backend
 
+##### Backend
 ```
   handleRatingChange(n){
       this.setState({stars: n});
@@ -234,14 +240,14 @@ Backend
   </form>
 ```
 
-Fontend
+##### Fontend
 
-!!!!review create pic
+![review form](https://github.com/rinayumiho/yulp/blob/main/app/assets/images/yulp-review-form.PNG)
+
 
 Users can also update or delete their own reviews. Just log in, find the review and click the top right icon.
 
-Backend
-
+##### Backend
 ```
   editandDelete(){
       if (this.props.user !== null && this.props.user !== undefined) {
@@ -287,9 +293,11 @@ Backend
   }
 ```
 
-Fontend
+##### Fontend
 
-!!!!review edit and delete pic
+![review edit](https://github.com/rinayumiho/yulp/blob/main/app/assets/images/yulp-update-delete.PNG)
+
+
 
 ## Future Work
 
