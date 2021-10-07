@@ -58,7 +58,7 @@ class BusinessIndex extends React.Component{
         
         if ( this.hasSearchContent === false && (Object.keys(this.props.businesses).length === 0 || !Array.isArray(this.props.businesses))) {
             return (
-                <div>Currently Unavailable</div>
+                <div></div>
             );
         }
 
