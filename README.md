@@ -303,8 +303,6 @@ Users can also update or delete their own reviews. Just log in, find the review 
 
 - [x] Add Review count in both business index and show page
 - [x] Add term of service, privacy policy pages in session form. Add regulation page in review form
-- [ ] Allow user to upload avatar
-- [ ] Add useful, cool, funny tags for reviews
 
 ## References
 
