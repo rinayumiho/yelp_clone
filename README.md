@@ -1,6 +1,6 @@
 # yulp
 
-[Live Demo](https://yulp-lc.herokuapp.com/#/)
+[Live Demo (Link is temporarily unavailable, I am working to resolve this. I sincerely apologize for it.)](https://yulp-lc.herokuapp.com/#/)
 
 yulp is a full stack clone of yelp.
 
